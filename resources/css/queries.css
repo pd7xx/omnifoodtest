@@ -1,0 +1,99 @@
+/*for big tablets to 1200px width smaller than 1140px*/
+/*when you do your code snippets define your mrdia queries under device name along with dimention*/
+
+    @media only screen and (max-width: 1200px) {
+    .hero-text-box{
+    position: absolute;
+    width: 100%;
+    padding: 0 2%;
+    }
+
+    .row {
+        padding: 0 2%;/* creates this padding on all rows at the above breakpoint*/
+    }
+    
+    
+/*for small tablets to big tablets 768px to 1023px*/
+/*768px is where u check to see if site has broken*/
+
+    @media only screen and (max-width: 1023px) {
+    body{font-size: 16px;}
+    section {padding: 60px 0;}
+    
+    .long-copy{ /*As you can see you can call in the classes*/
+        width: 80%;
+        margin-left: 10%;
+    }
+        
+        .steps-box { margin-top: 10px; }
+        .steps-box:last-child {margin-top: 10px; }
+        .works-steps {margin-bottom: 40px;}
+        .works-steps: last-of-type {margin-bottom: 60px;}
+        
+        .app-screen {width: 50%; }
+        
+        .icon-small {
+            width: 17px;
+            margin-right: 0%;
+        }
+        
+        .city-features { font-size: 90%;}
+        
+        .plan-box{
+            width: 100%;
+            margin-left: 0%;
+        }
+        
+        /*When working out code snippets revist these selectors*/
+        
+        .plan-price { font-size: 250%;}
+        .contact-form {width:80%;}
+        
+}
+        
+/*for small phones and tables from 481px 767 px*/
+
+    @media only screen and (max-width: 767px) {
+        body {font-size: 16px;}
+        section {padding: 30px 0;}
+        
+        .row,
+        .hero-text-box {padding: 0 4%; }
+        .col {
+            width: 100%;
+            margin: 0 0 4% 0;
+        }
+            
+        /*At this size this line will stack coloums on top of each other*/
+        .main-nav {display: none;} /*hides the nav to make room for mobile navigation*/
+        
+        h1 {font-size: 180%;}
+        h2 {font-size: 150%;}
+        
+        .long-copy{ /*As you can see you can call in the classes*/
+        width: 100%;
+        margin-left: 0%;
+    }
+        .app-screen{width: 40%}
+        .steps-box:first-child{
+            text-align-last: center;
+        }
+        .works-step div {    
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+        padding: 4px;
+        font-size: 120%;
+        }
+        
+        
+        works-step: {margin-top: 20%;}
+        works-step: last-of-type { margin-bottom: 20%;}
+    
+}
+
+/*for small phones upto 480 pixels*/
+
+    @media only screen and (max-width: 480px) {
+    
+}

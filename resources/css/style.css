@@ -1,0 +1,706 @@
+/*------------------------------------------------------*/
+/*BASIC SET UP*/
+/*------------------------------------------------------*/
+*   {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*LEC37 Above is the fondation Syntax for starting a css file*/
+
+html,
+body {
+    background-color:#ffffff;
+    color: #505050;
+    font-family:'lato', 'arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*LEC46 This clears the float after elemets from a section see html. this is apparantly popular*/
+
+/*LEC37 Above is the more fondation Syntax with inclusion of setting the font family and font size*/
+/*LEC37 We also include the font weight. we get these from the font link tag in the htm;*/
+/*LEC37 We also include text rendering to ensure quality*/
+/*LEC37 These are concidered global settings as the selector is html*/
+
+
+/*------------------------------------------------------*/
+/*HEADER*/
+/*------------------------------------------------------*/
+
+header  {
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+/*LEC39p1 line 27 imports the bg image into the header*/
+/*LEC39p1 line 28 Commands the whole img to cover the bg*/
+/*LEC39p1 line 29 positions the image*/
+/*LEC39p1 line 30 dictates the img height. The 100VH stands for 100% of the View point or vertical height*/
+/*LEC39p1 line 28 linear-gradient(rgba(0, 0, 0, 0.7), (rgba(0, 0,0 , 0.7)),; not working come back to this SOLVED IT!!! what was the problem?*/
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*LEC39p1 line 00 This is styling a text box hero-text-box*/
+/*LEC39p1 line 00 This textbox will not hang on the grid*/
+/*LEC39p1 line 44 This textbox will instead be an absolute textbox*/
+/*LEC39p1 line 44 because this is the only way we can horizontaly and verticaly center it*/
+/*LEC39p1 line 43 The div asigned in the header of the html*/
+/*LEC39p1 line 48 This makes the textbox remain centeren in the header when re-sized*/
+
+.logo {
+    height: 100px;
+    width:auto;
+    float:left;
+    margin-top: 20px;
+}
+
+.logo-black { 
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin-top: 5px 0;
+} 
+/*LEC63 included another instance of logo to be displayed while this one dissappears*/
+
+/*Main Nav */
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+/*We use list-style to get rid of the bullet point*/
+/*Display:inline-block targets the inline elements within the main nav class*/
+/*Float right for positioning*/
+/*List stle to get rid of decoration*/
+/*Li targets the lists in html. dictating to treat as blocks and have space inbetween*/
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 1px solid #e67e22;
+    color: #ffffff;
+}
+
+/*work out the font size by dividing 18pt (what we want) by 20px (the html value above) = 0.9 x10 =9 which equates to 90% BOOM */
+/*the border bottom and transition replate to the nav effect. As you can see again x2 sets of buttons are made covering the button states */
+
+
+/*LEC63-Sticky Nav*/
+/*LEC63-Creating a navigation system that fixes to the top of the screen when scrolling downwards*/
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #f0f0f0;
+    z-index: 9999; /*LEC64-the number ensures the nav will remain on top */
+}
+.sticky .main-nav { 
+    margin-top: 18px; 
+}
+/*LEC63 decreses the margin around the nav system*/
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 18px 0px;
+    color: #555;
+    }
+
+.sticky .logo{display: none;} 
+/*Hides the original logo*/
+.sticky .logo-black {display: block;}
+/*displays the black logo the original logo*/
+
+/*------------------------------------------------------*/
+/*Features Section*/
+/*------------------------------------------------------*/
+
+.section-features .long-copy { /*LEC45 Good example of how to target an element withinhtml*/
+    margin-bottom: 30px; /*LEC45 creates space beteen the features copy and the coloums*/
+}
+
+/*------------------------------------------------------*/
+/*Meals Section*/
+/*------------------------------------------------------*/
+
+.section-meals {
+    padding: 0; /*LEC45 Meals Section*/
+}
+
+.meals-showcase {
+    list-style: none; /*To get rid of bullet point from the li tag in the html*/
+    width: 100%; /*as dictated by the design. stretches across the browser*/
+}
+.meals-showcase li {
+    display: block;/*To be honest still do not know when to use I guest when u want to manipulate elements in a block of html code*/
+    float: left; /*Floats all the imgs to the left*/
+    width: 25%; /*4x25 makes the 100%*/
+}
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;/*LEC 45 this propertiy helps the img to stay in its boundaries*/
+    background-color:#000;
+}
+
+.meal-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);/*LEC45 Scales up each img but causes the img to overflow its boundaries*/
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03); /*LEC45 this scales the imag back to its original size*/
+}
+/*------------------------------------------------------*/
+/*How it works Section*/
+/*------------------------------------------------------*/
+
+.section-steps{
+    background-color: #eae3e3;/*A subtle bg colour for section steps only*/
+}
+
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child {
+        padding-left: 3%;
+        margin-top: 70px;
+}
+
+.app-screen{
+    width:40%;
+}
+
+.works-step{
+    margin-bottom: 50px;
+}
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.works-step div{
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius:50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btm-app:link,
+.btm-app:visited {
+    border: 0;
+}
+/*LEC49 As we formatted links sitewide it had also applied the formatting to the app buttons the code above prevents this*/
+
+.btm-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+
+}
+/*LEC46p1 Above :first-child represents zero selectors see pdf handbook on useful zero selectors*/
+/*LEC46p1 First child means 1st of the coloums we created in css and so forth*/
+/*LEC46p1 Text right align does not only do text but anything in the block or inline blocks*/
+/*LEC46p1 Remember percentages represent reponsive layout and fluid design*/
+
+/*------------------------------------------------------*/
+/*Cities*/
+/*------------------------------------------------------*/
+
+
+.box img {
+    width: 100%;
+    height:auto;
+    margin-bottom: 15px;
+}
+
+.city-feature{
+    margin-bottom: 5px; /*LEC49 increasing the spacing between each city feature divs */
+}
+
+.icon-small{
+    display: inline-block;/*LEC49 Remeber this targets elements within a html block */
+    width: 30px;/*LEC49 Targets the space between icon and line of text*/
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;/*LEC49 Targets the icons as they are icon fonts*/
+    margin-right: 10px;/*LEC49 increases the margin to the right of the icons*/
+
+    /*LEC49 Secrets to align icont to text see technique below */
+    /*LEC49 A positive margin gives us space a negative margin takes space away*/
+
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -6px;
+}
+
+/*------------------------------------------------------*/
+/*Testimonials*/
+/*------------------------------------------------------*/
+
+.section-testimonials { /*This is the code to incorporate the bacgroung img*/
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(img/back-customers.jpg);/*L51 Creating the gradient bg*/
+    background-size: cover;/*L52 This property covers the section with the img*/
+    color: #ffffff;/*L51 Just makes the font coulurs turn white without specifying?*/
+    background-attachment: fixed;/*L51 The holy grail of web effects keeping the bg img fixed*/
+}
+blockquote { /*L51 this is defining the look of the blockquotes.NOTICE no .(period) at the beginning of the selector at this is a tag not a class*/
+    padding: 2%;/*L51 for all the blockquotes */
+    font-style: italic;/*L51 Make sure u have a italic style in the webfont. coded in the html file   see in header*/
+    line-height: 145%; /*L51 Know when to use %?*/
+    position: relative; /*This section is the parent. needed to be established so the quotation mark can be posistioned in declaration below*/
+    margin-top: 40px;
+}
+
+blockquote:before { /*L51 These lines are for putting quotation marks at each block NOTICE the before property being used.This establishes that something will be placed before the blockquote*/
+    content: "\201C"; /*L51 The css way of typing text content. The code is the syntax for quotation glyph*/
+    font-size: 500%; /*L51 again resasons why %?*/
+    display: block; /*L51 Again targets inline elements*/
+    position: absolute;/*L51 This section is the child This is needed for the postioning of the quotation mark*/
+    left:-5px;
+    top:-5px;
+
+}
+
+cite { /*L51 Targeting the x3 cite tags*/
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+
+cite img { /*L51 NOTICE this selector is only targeting the image inside the cite div, get it?*/
+    height:50px; /*L51 Now the control of that img*/
+    border-radius: 50%; /*L51 Creates a round box*/
+    margin-right: 10px; /*L51 Gives margin to the right of each pic*/
+    vertical-align: middle;/*L51 Makes the text align to the middle horizontaly*/
+}
+
+/*------------------------------------------------------*/
+/*Sign Up Lec 53 begining to customize this section in css*/
+/*------------------------------------------------------*/
+.section-plans{
+    background-color: #f4f4f4
+}
+
+.plan-box{ /*Defines the attributes of all 3 plan box classes*/
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px #efefef;/*Defines a box shadow notice the 4 values*/
+}
+
+.plan-box div{ /*Lec53 Targets the div sections within plan-box class*/
+    padding: 15px; /*Lec53 Targets x3 plan box classes*/
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box div:first-child{
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child{
+    text-align: center;
+    border: 0;
+}
+
+.plan-price { /*Targets p class plan-price*/
+    font-size:300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #e67e22;
+
+}
+
+plan-price span {
+font-size: 30%;/*of 300% bcoz it is child of the above*/
+font-weight: 300;
+}
+
+.plan-price meal { /*Targets p class plan-price*/
+    font-size:80%;
+}
+.plan-box ul { /*Targets the ul tags  within plan-box class*/
+    list-style: none;
+}
+
+.plan-box ul li { /*Targets the LI tags  within plan-box class*/
+    padding: 5px 0;
+}
+
+/*------------------------------------------------------*/
+/*LEC54/55 - Building the contact form Section*/
+/* where happy to hear from you*/
+/*------------------------------------------------------*/
+
+.contact-form{
+    width: 60%; /*work out how the % of width work within webdev*/
+    margin: 0 auto; /*this will center the contact form inside its parent elemeny*/
+}
+
+input[type=text], /*this targets the (<input type="text") in the html. No space between the input and[]*/
+input[type=email], /*this targets the (<input type="email") in the html*/
+select,
+textarea { /*Notice the layout of code when targeting form elements*/
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+}
+textarea{
+    height: 100px;/*Notice how textarea is just a css identifyer in-itself*/
+}
+input[type=checkbox]{ /*This helps put abit more spacing around the checkbox. Play around*/
+    margin: 10px 5px 10px 0;
+}
+*:focus {outline: none;}
+/*This helps to get rid of the blue highlight when input fields are selected*/
+/*This is also known as a zero class */
+
+
+/*------------------------------------------------------*/
+/*LEC56/57 - Building the FOOTER*/
+/*------------------------------------------------------*/
+
+footer {/*LEC56-57 str8 targets the footer div*/
+    background-color: #333;
+    padding: 40px;
+}
+
+.footer-nav{/*LEC56-57 targets the nav section ul lists*/
+    list-style: none; /*LEC56-57 takes away the defaulted bullet points*/
+    float: left; /*LEC56-57 aligns to left of div*/
+}
+
+.social-links{ /*LEC56-57 targets the nav social section ul lists*/
+    list-style: none;/*LEC56-57 again takesa away the defaulted bullet points*/
+    float: right;
+}
+
+.footer-nav li,/*LEC56-57 targeting foot and social along with the associated tag li*/
+.social-links li {
+    display: inline-block; /*LEC56-57 makes both targets list side by side*/
+    margin-right: 20px; /*LEC56-57 place margin to the right of eack link*/
+}
+
+.footer-nav li:last-child,/*LEC56-57 zero class (look up zero classes the concepts behind them)*/
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,/*LEC56-57 creating the link states for the nav*/
+.footer-nav li a:visited,
+.social-links li a:link,/*LEC56-57 creating the link states for the social nav*/
+.social-links li a:visited {
+    text-decoration: none; /*LEC56-57 to get rid of any default decoration*/
+    border: 0;/*LEC56-57 to get rid of a border we applied earlier on*/
+    color: #888;
+    transition: color 0.25;
+}
+
+.footer-nav li a:hover, /*LEC56-57 hover state*/
+.footer-nav li a:active { /*LEC56-57 when hovering shows ddd color*/
+    color: #ddd;
+}
+
+.social-links li a:link,/*LEC56-57 Increases the size of the icons*/
+.social-links li a:visited {
+    font-size: 140%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    transition: color 0.2s; /*LEC56-57 targets all the classes of the icons f smooth colour trans*/
+    }
+
+.ion-social-facebook:hover { /*LEC56-57 hover color effect on the icons*/
+    color: #3b5998;
+}
+.ion-social-twitter:hover {
+    color: #00aced;
+}
+.ion-social-googleplus:hover {
+    color: #dd4b39;
+}
+.ion-social-instagram:hover {
+    color: #517fa4;
+}
+
+footer p {
+    color: #888;
+    text-align: center;
+    font-size: 90%; /*LEC56-57 still need to understand*/
+    margin-top: 30px;
+}
+
+
+
+/*------------------------------------------------------*/
+/*REUSABLE COMPONENTS*/
+/*------------------------------------------------------*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+/*LEC39p1 Above code triggers the fluid grid css document*/
+
+
+section {
+    padding: 80px 0;
+}
+/*LEC43p2 Section - Above code targets the <section> in html*/
+/*LEC43p2 Section - Notice 80px Means top and bottom padding 0 means left right margins. When its shorthand this is the syntax*/
+
+.box{
+    padding: 1%;/*just for ashetic reasons*/
+
+}
+/*------------------------------------------------------*/
+/*HEADINGS*/
+/*------------------------------------------------------*/
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+
+}
+
+
+h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 240%;/*20(px)percent of 200% = 40px(is what we want it to be. so if the global setting is at 20px and u want it to be 40px find the difference and xit by 10. This will equal the amount of percentage to use for the relative value*/
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+/*LEC40p2 line 44-48 we are changing manipulating the headingwith values*/
+/*LEC39p1 line 38 takes down the margin values to 0 as it was creating gaps in the design*/
+/*LEC40p2 line 42-43 we are changing the h1 value to white and making the font size relative by using percentages which we will use throughout*/
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+    display: block;/*its a block, think of declarations as blocks*/
+    height: 2px;/*its height is 2px*/
+    background-color: #e67e22;/*the bg colour of the block is specified*/
+    content: " ";/*the content of the block is empty*/
+    width: 100px; /*its width is specified*/
+    margin: 0 auto;/*its margin 0 top and btm, left and right auto for flexible reasons*/
+    margin-top: 30px;/*its distance from its relation h2*/
+}
+/*LEC43p2 Section - h2:after is an example of pseudo classes. The above is its syntax*/
+/*LEC43p2 Section - h2:after What does pseudo mean? A pseudo is creating a variant of something already created. So the pseudo of h2 after is its tag in html*/
+/*LEC43p2 Section - h2:after it is tied to the original h2 selector above and its properties and values are its DnA*/
+
+/*PARAGRAPHS*/
+
+.long-copy{
+    line-height: 145%; /*why?*/
+    width: 70%;/*of what? my guess is that the width of the page is always 100% */
+    margin-left: 15%;/*why?*/
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+/*LEC42-43p2 Above code manipulates the paragraphs in the colums changing its font size and line height*/
+/*LEC42-43p2 Reminder the p is the standard <p> tag in html*/
+/*LEC42-43p2 the .box relates to its class set in the html*/
+
+
+/*-------Icons------*/
+
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+/*LEC42-43p2 the .icon-big class set in the html comes as use as we can now define it size and colour. Take note that this icon acts as a font.*/
+/*LEC42-43p2 Display block seems that it will cause a line break*/
+
+
+/*------------------------------------------------------*/
+/*Links*/
+/*Formatting all links*/
+/*------------------------------------------------------*/
+a:link,
+a:visited{
+    color:#e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover
+a:active {
+    color: #505050;
+    border-bottom: 1px solid transparent;
+}
+/*LEC 49 formatting links sitewide see above*/
+
+
+/*------------------------------------------------------*/
+/*BUTTONS*/
+/*------------------------------------------------------*/
+
+.btn:link,
+.btn:visited,
+input[type=submit]{ /*LEC55 applying same formatting to submit btn on form*/
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    color: #ffffff;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+/*LEC40p2 line76 is a global selector that represents butns. All properties are listed below it*/
+/*LEC40p2 line71-72 pseudo selectors are used to create states for the buttons*/
+/*LEC40p2 line79 The transition line dictates the time it takes for the color to change */
+/*LEC40p2 line79 Not sure what display inline-block is*/
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]{ /*LEC55 applying same formatting to submit btn on form*/
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #ffffff;
+    margin-right: 15px;
+}
+
+/*LEC40p2 line78 draws upon the button class in the html*/
+/*LEC40p2 margin-right places a 15px gap between butns*/
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+/*LEC40p2 line85 also draws upon the button class in the htm*/
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,/*LEC55 applying same formatting to submit btn on form*/
+input[type=submit]:active{ /*LEC55 applying same formatting to submit btn on form*/
+    background-color: #a15512;
+    border: 1px solid #a15512;
+}
+
+/*LEC40p2 In the above we have created the hover and active links of the buttons.Notice we have done this separately from the other btn selector. Why? maybe states are best declared separately. Notice how we can use stacked selectors*/
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #a15512;
+    color: #ffffff;
+}
+
+/*LEC40p2 Tha above showcases the ghost buttons white text when active and rolled over. Remember this process when it comes to producing button states*/
+
+/*------------------------------------------------------*/
+/*LEC66 Animations*/
+/*------------------------------------------------------*/
+
+/*LEC66 FOR ANIMATED EFFECTS*/
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 
+{
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-4 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
+}
+

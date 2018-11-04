@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang"en">
+<head>
+    <!--LEC58-Response design-should always include this when designing for responsive design-->
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <!--LEC37 linked to a css file dl from the net-->
+
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <!--LEC37 your normal stylesheet-->
+
+    <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+    <!--LEC58-Response design your media query stylesheet-->
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!--LEC37 How fonts are installed onto a webpage. Making use of googlefoonts-->
+
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <!--LEC38 Setting up the fluid grid system for responsive web design linking the grid css file-->
+
+    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+    <!--LEC42 p1 What we have here is a link to a downloaded iconfont css file which will enable icon fonts to be used on websites-->
+    
+    <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+    <!--LEC66 Animate CSS Framework-->
+
+    <title>Omnifood</title>
+
+    </head>
+
+    <body>
+        <header>
+            <nav><!--LEC63 create a class for nav to be styled in CSS-->
+                <div class="row">
+                <img src="resources/img/logo-white.png" alt="Omnifood logo" class="logo">
+                <img src="resources/img/logo.png" alt="Omnifood logo" class="logo-black"><!--LEC63 inclusion of black version of logo for fixed Nav-->
+                <ul class="main-nav">
+                    <li><a href="#features">Food delivery</a></li>
+                    <li><a href="#works">How it works</a></li>
+                    <li><a href="#cities">Our cities</a></li>
+                    <li><a href="#plans">Sign up</a></li>
+                    </ul>
+                </div>
+            </nav>
+        <!--LEC41 Part3 The above is the construction of the navigation and placement of the logo-Each of the list elements will be a link. The row class is relatyed to the gridcss-->
+
+                <div class="hero-text-box">
+                    <h1>Goodbye junk food.<br>Hello super healthy meals.</h1>
+                    <a class="btn btn-full js--scroll-to-plans" href="#">i'm hungry</a>
+                    <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a>
+                </div>
+
+        <!--LEC 39 The beginning of the design and header design-->
+        <!--LEC 39 line23 Dictated too by the design we create our header-->
+        <!--LEC 39 line22 We create our divs-->
+        <!--LEC 39 line24-25 We create our links-->
+        <!--LEC 40p2 line24-25 We Created classes for both btns-->
+        <!--LEC 40p2 line24-25 The btn by itself looks strange but it is a global setting used in the css.It seems like the space after it serperates classes-->
+
+        </header>
+
+        <section class="section-features js--section-features" id="features"><!--a new JS class to be used by script.js-->
+                <div class="row">
+                    <h2> Get Food fast &mdash; not fast food.</h2>
+                    <p class="long-copy">
+                        Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!
+                    </p>
+                </div>
+
+                <div class="row">
+                <div class="col span-1-of-4 box">
+                    <i class="ion-ios-infinite-outline icon-big"></i>
+                    <h3> upto 365 days/years</h3>
+                    <p>
+                        Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.
+                    </p>
+                </div>
+
+                    <div class="col span-1-of-4 box">
+                    <i class="ion-ios-stopwatch-outline icon-big"></i>
+                    <h3>Ready in 20 minutes</h3>
+                    <p>
+                        You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.
+                    </p>
+                </div>
+
+                    <div class="col span-1-of-4 box">
+                    <i class="ion-ios-nutrition-outline icon-big"></i>
+                    <h3>100% organic</h3>
+                    <p>
+                        All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!
+                    </p>
+                </div>
+
+                    <div class="col span-1-of-4 box">
+                    <i class="ion-ios-cart-outline icon-big"></i>
+                    <h3>Order anything</h3>
+                    <p>
+                        We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--LEC 42p1 The beginning of the features section. Create a class for the section and a div row class for the content. Within that row start coding your content. Long copy means basicaly the copy for the website-->
+
+        <!--LEC 42p1 &mdash; creates the - special character (see example and preview-->
+
+        <!--LEC 42p1 We then create a <p class= for the subheading and place the actual content below (see above)-->
+
+        <!--LEC 42p1 NOTE WHAT WE ARE DOING IS SETTING UP THE HTML STRUCTURE FIRST then going over to style the CSS(so dont worry if your page looks a mess at the moment)-->
+
+        <!--LEC 42p1 We then create another div row with a class of row. This relates to the grid.css file on our server. The grid.css will dictate to our coloums-->
+
+        <!--LEC 42p1 Within that row we then begin to create our coloums "col span-1-of-4" calls in from the grid.css. We then duplicate these lines of code x3 more times to reflect the design and fill the copy with the correct content. Make sure you copy from the correct div to div-->
+
+        <!--LEC 42p1 NOTE that the "col" and "span-1-of-4" are two different selectors called in from the grid.css file-->
+
+        <!--LEC 42p1 The <i> is used to call in icon fonts which are embeded in the downloaded stylesheet. A link to that style sheet place in the head above-->
+
+        <section class="section-meals">
+            <ui class="meals-showcase clearfix">
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/1.jpg" alt="Korean bibimbap with egg and vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/2.jpg" alt="Simple italian pizza with cherry tomatoes">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/3.jpg" alt="Chicken breast steak with vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/4.jpg" alt="Autumn pumpkin soup">
+                    </figure>
+                </li>
+            </ui>
+            <ui class="meals-showcase clearfix">
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/5.jpg" alt="Paleo beef steak with vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/6.jpg" alt="Healthy baguette with egg and vegetables">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/7.jpg" alt="Burger with cheddar and bacon">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="meal-photo">
+                        <img src="resources/img/8.jpg" alt="Granola with cherries and strawberries">
+                    </figure>
+                </li>
+            </ui>
+        </section>
+
+        <!-- Building the meals section-->
+        <!--Alt discriptions taken from word document-->
+        <!--New element called <figures> can only place images between the tags and create captions-->
+        <!--We give figures a class so we can style in css-->
+        <!--The result of the html looks like a list of imgs ontop of each other. We will then style with css-->
+
+        <section class="section-steps" id="works">
+            <div class="row">
+            <h2>How it works &mdash; simple as 1,2,3</h2>
+            </div>
+
+            <div class="row">
+                <!-- js--wp-2 -->
+
+                <div class="col span-1-of-2 steps-box">
+                <img src="resources/img/app-iPhone.png" alt="omnifood app iphone" class="app-screen">
+                </div>
+
+                <div class="col span-1-of-2 steps-box">
+
+                    <div class="works-step">
+                    <div>1</div>
+                    <p>Choose the subscription plan that best suits your needs and sign up today.</p>
+                    </div>
+
+                    <div class="works-step">
+                    <div>2</div>
+                    <p>Order your delicious meal using our mobile app or website. Or you can even call us!</p>
+                    </div>
+
+                    <div class="works-step">
+                    <div>3</div>
+                    <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
+                    </div>
+
+                    <a href="#" class="btm-app"><img src="resources/img/download-app.svg" alt="appstore button"></a>
+
+                    <a href="#" class="btm-app"><img src="resources/img/download-app-android.png" alt="playstore button"></a>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- LEC46 Building the how it works section-->
+        <!-- LEC46 See notes and how the above block of code relates to sketched layout-->
+        <!-- LEC46 The A tag acts as a division in itself-->
+        <!-- LEC46 Col span 1-of-2 relates to selector in grid css  -->
+
+<!--LEC49 CITIES-->
+
+        <section class="cities" id="cities"><!--LEC49 Cities Seection-->
+
+            <div class="row"><!--LEC49 Row1-->
+            <h2>We're currently in these cities</h2>
+            </div>
+
+        <div class="row"><!--LEC49 Row2 js--wp-3-->
+                <div class="col span-1-of-4 box"><!--LEC49 an ID defined in the css grid giving us 4 coloums in this row-->
+                    <img src="resources/img/lisbon-3.jpg" alt="City of lisbon Image">
+
+                    <h3>Lisbon</h3>
+                    <div class="city-feature"><!--LEC49 class of the div-->
+                    <i class="ion-person icon-small"></i><!--LEC49 contains x2 classes-->
+                    1600+ happy eaters
+                    </div>
+
+                    <div class="city-feature">
+                    <i class="ion-social-twitter icon-small"></i>
+                    60+ top chefs
+                    </div>
+
+                    <div class="city-feature">
+                    <i class="ion-ios-star icon-small"></i>
+                    <a href="#">@omnifood_lx</a> <!--LEC49 Now we are going to format a twit link into a link and change its colour. this will be done via css see links section-->
+                    </div>
+
+                    <!--LEC49 All of the above is placed in the first coloum-->
+                </div>
+
+            <div class="col span-1-of-4 box">
+                    <img src="resources/img/san-francisco.jpg" alt="City of San Francisco Image">
+
+                    <h3>San Francisco</h3>
+                    <div class="city-feature">
+                    <i class="ion-person icon-small"></i>
+                    3700+ happy eaters
+                    </div>
+
+                    <div class="city-feature">
+                    <i class="ion-social-twitter icon-small"></i>
+                    160+ top chefs
+                    </div>
+
+                    <div class="city-feature">
+                    <i class="ion-ios-star icon-small"></i>
+                        <a href="#">@omnifood_sf</a>
+                    </div>
+                </div>
+                    <!--LEC49 All of the above is placed in the 2nd coloum-->
+
+            <div class="col span-1-of-4 box">
+                    <img src="resources/img/berlin.jpg" alt="City of Berlin Image">
+
+                    <h3>Berlin</h3>
+                    <div class="city-feature">
+                    <i class="ion-person icon-small"></i>
+                    110+ top chefs
+                    </div>
+
+                    <div class="city-feature">
+                    <i class="ion-social-twitter icon-small"></i>
+                    2300+ happy eaters
+                    </div>
+
+                    <div class="city-feature">
+                    <i class="ion-ios-star icon-small"></i>
+                        <a href="#">@omnifood_berlin</a>
+                    </div>
+                </div>
+                    <!--LEC49 All of the above is placed in the 3rd col-->
+
+            <div class="col span-1-of-4 box">
+                    <img src="resources/img/london.jpg" alt="City of london Image">
+
+                    <h3>London</h3>
+                    <div class="city-feature">
+                    <i class="ion-person icon-small"></i>
+                    1200+ happy eaters
+                    </div>
+
+                    <div class="city-feature">
+                    <i class="ion-social-twitter icon-small"></i>
+                    50+ top chefs
+                    </div>
+
+                    <div class="city-feature">
+                    <i class="ion-ios-star icon-small"></i>
+                        <a href="#">@omnifood_london</a>
+                    </div>
+                </div>
+                    <!--LEC49 All of the above is placed in the 4th col-->
+            </div>
+        </section>
+
+<!-- LEC50 Customer Testimonial Section -->
+
+        <section class="section-testimonials"><!-- LEC50 x2 Rows x3 cols -->
+
+            <div class="row">
+            <h2> Our customers cant live without us</h2>
+            </div>
+
+            <div class="row">
+            <div class="col span-1-of-3"><!-- LEC50 Taken from the grid css file -->
+            <blockquote><!-- LEC50 Tag only used for quotations -->
+                Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
+                <cite> <img src="resources/img/customer-1.jpg">Albert Duncan</cite><!-- LEC50 1st use of cite look this up for more details -->
+            </blockquote>
+            </div>
+
+            <div class="col span-1-of-3">
+            <blockquote>
+                Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!
+                <cite> <img src="resources/img/customer-2.jpg">Joe Shmo</cite>
+            </blockquote>
+            </div>
+
+            <div class="col span-1-of-3">
+            <blockquote>
+                I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!
+                <cite> <img src="resources/img/customer-3.jpg">Millton Champan</cite>
+            </blockquote>
+            </div>
+        </div>
+        </section>
+
+        <!-- LEC52 Customer Testimonial Section -->
+        <section class="section-plans js--section-plans" id="plans"><!-- LEC52 New Section -->
+
+            <div class="row"><!-- LEC52 Row1 hosing the headline -->
+            <h2>Start eating healthy today</h2></div>
+
+            <div class="row"><!-- LEC52 Row2 Housing the cols-->
+                <div class="col span-1-of-3"><!-- LEC52creates the cols and calls in from grid css-->
+
+                    <div class="plan-box js--wp-4"><!-- LEC52 col 1 In this instance or in general create divs within col spans if u wish to place content there.-->
+
+                        <div>
+                        <h3>Premium</h3>
+                            <p class="plan-price">£399<span>/month</span></p><!-- LEC52 spans r only used if anything needs to be styled within paragraphs-->
+                            <p class="plan-price-meal">Thats only £13.30 per meal</p>
+                        </div>
+
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>1 meal everyday</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Order 24/7</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Access to newest creations</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Free delivery</li>
+                            </ul>
+                        </div>
+                        <div>
+                        <a href="" class="btn btn-full">Sign Up Now</a></div>
+                    </div>
+                </div>
+
+            <div class="col span-1-of-3"><!-- LEC52creates the cols and calls in from grid css-->
+
+                    <div class="plan-box"><!-- LEC52 col 2-->
+
+                        <div>
+                        <h3>Pro</h3>
+                            <p class="plan-price">149$<span>/month</span></p>
+                            <p class="plan-price-meal">That’s only 14.90$ per meal</p>
+                        </div>
+
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>1 meal 10 days/month</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Order 24/7</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Access to newest creations</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Free delivery</li>
+                            </ul>
+                        </div>
+                        <div>
+                        <a href="" class="btn btn-ghost">Sign Up Now</a></div>
+                    </div>
+                </div>
+
+            <div class="col span-1-of-3"><!-- LEC52creates the cols and calls in from grid css-->
+
+                    <div class="plan-box"> <!-- LEC52 col 3-->
+
+                        <div>
+                        <h3>Starter</h3>
+                            <p class="plan-price">£399<span>/month</span></p>
+                            <p class="plan-price-meal">&nbsp;</p> <!--Special character than enables a empty line space-->
+                        </div>
+
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>1 meal</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Order from 8 am to 12 pm</li>
+                                <li><i class="ion-ios-close-empty icon-small"></i></li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Free delivery</li>
+                            </ul>
+                        </div>
+                        <div><a href="" class="btn btn-ghost">Sign Up Now</a></div>
+                    </div>
+                </div>
+
+            </div>       
+        </section>
+
+        <!-- LEC54-55 Customer Building the contact form Section -->
+
+        <section class="section-form">
+            <div class="row">
+                <h2>We're happy to hear from you</h2>
+            </div>
+            <div class="row">
+                <form method="post" action="#" class="contact-form">
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="text" name="name" id="name" placeholder="your name" required>
+                        </div>
+                        </div>
+
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="email" name="email" id="email" placeholder="your email" required>
+                        </div>
+                        </div>
+
+                        <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="find-us">How did you find us?</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <select name="find-us" id="find-us">
+                            <option value="friends" selected>Friends</option>
+                            <option value="Search">Search engine</option>
+                            <option value="ad">Advertisement</option>
+                            <option value="other">Other</option>
+                        </select>
+                        </div>
+                    </div>
+
+                        <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Newsletters</label>
+                        </div>
+
+                        <div class="col span-2-of-3">
+                            <input type="checkbox" name="news" id="news" checked> yes, please
+                        </div>
+                            </div>
+
+                        <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>Drop Us a line</label>
+                        </div>
+
+                        <div class="col span-2-of-3">
+                            <textarea name="message" placeholder="your message"></textarea>
+                        </div>
+                            </div>
+
+                        <div class="row">
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="send it!">
+                        </div>
+                            </div>
+
+                  </form>
+            </div>
+        </section>
+
+        <!-- LEC56-57 Building the footer-->
+        <!-- LEC56-57 Notice it is placed after last section not within it-->
+        <!-- LEC56-57 Footer is its own section type-->
+
+      <footer>
+            <div class="row"><!-- LEC56-57 main row of the section -->
+                <div class="col span-1-of-2"><!-- LEC56-57 left nav of links see sketch-->
+                <ul class="footer-nav">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">ios app</a></li>
+                    <li><a href="#">android app</a></li>
+                </ul>
+                </div><!-- LEC56-57 left nav see sketch-->
+
+
+                <div class="col span-1-of-2"><!-- LEC56-57 right nav of social icons see sketch-->
+                    <ul class="social-links">
+                        <li> <a href="#"><i class="ion-social-facebook"></i></a></li>
+                        <li> <a href="#"><i class="ion-social-twitter"></i></a></li>
+                        <li> <a href="#"><i class="ion-social-googleplus"></i></a></li>
+                        <li> <a href="#"><i class="ion-social-instagram"></i></a></li>
+                    </ul>
+                </div><!-- LEC56-57 social nav icons linked to social icons found at www1onicons.com-->
+                <!-- LEC56-57 Notice give icons an  <i class=""></i> -->
+            </div>
+
+            <div class="row">
+                <p>
+                    Copyright &copy;2015 by Omnifood. All rights reserved
+                </p>
+            </div>
+
+        </footer>
+
+        <!-- LEC61-62-63 The begining of Jquery -->
+        <!-- LEC61-62-63 The begining of Jquery -->
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    <!--LEC64 this is the script for the sticky navigation effect dl from the website see notes-->
+
+    <script src="resources/js/script.js"></script>
+    <!--LEC64 this is our own script always make sure this is the last a line of scripts-->
+        
+   </body>
+    
+    
+</html>
+
+<!-- Title: Our customers can't live without us
+Plan 1: Premium
+399$ per month
+That’s only 13.30$ per meal
+1 meal every day
+Order 24/7
+Access to newest creations
+Free delivery
+
+Plan 2: Pro
+149$ per month
+That’s only 14.90$ per meal
+1 meal 10 days/month
+Order 24/7
+Access to newest creations
+Free delivery
+
+Plan 3: Starter
+19$ per meal
+1 meal
+Order from 8 am to 12 pm
+Free delivery
+
+-->
